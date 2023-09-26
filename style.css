@@ -1,14 +1,15 @@
 *{
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 
 .main{
   width: 100%;
   background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(image1.jpg);
-  position: center;
+  background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 109vh;
 }
 
 .navbar{
@@ -29,8 +30,10 @@ padding: 0;
   font-family: Arial;
   padding-left: 20px;
   float: left;
-  padding-top: 10px;
+  padding-top: 23px;
   font-style: italic;
+  cursor: pointer;
+  
 
 }
 
@@ -86,6 +89,10 @@ ul li a:hover{
   border-top-left-radius: 5px;
 
 }
+.search :placeholder-shown{
+  color: beige;
+}
+
 
 .btn{
   width:100px;
@@ -130,6 +137,7 @@ ul li a:hover{
   padding-left: 20px;
   margin-top: 9%;
   letter-spacing: 2px;
+  text-shadow: 25px -2px 1px rgba(0,0,0,0.5);
 }
 
 .content .explore{
@@ -148,4 +156,33 @@ ul li a:hover{
   text-decoration: none;
   color: black;
   transition: .3s ease;
+}
+
+.content span{
+  color: #ff7200;
+  font-weight: bolder;
+}
+
+
+/* Media query for screens smaller than 1200px */
+@media screen and (max-width: 1200px) {
+  .navbar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .icon,
+  .menu,
+  .search {
+    display: none;
+  }
+
+  ul {
+    float: none;
+    text-align: center;
+  }
+
+  ul li {
+    margin: 10px 0;
+  }
 }
